@@ -1,0 +1,134 @@
+:root {
+  /* primary */
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+
+  /* neutral */
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  font-family: "Karla", sans-serif;
+  background-color: var(--light-gray);
+}
+
+h2 {
+  font-size: 1.125rem;
+  color: var(--light-gray);
+}
+
+p,
+li {
+  color: var(--light-gray);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "community community"
+    "subscription why-us";
+
+  box-shadow: 0 5px 20px -5px var(--grayish-blue);
+  border-radius: 0.5rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+
+  padding: 2rem;
+}
+
+/* community section */
+.community {
+  grid-area: community;
+
+  background-color: var(--white);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.community h1 {
+  color: var(--cyan);
+}
+
+.community h2 {
+  color: var(--bright-yellow);
+}
+
+.community p {
+  filter: brightness(60%);
+  line-height: 1.5;
+}
+
+/* subscription section */
+.subscription {
+  grid-area: subscription;
+
+  background-color: var(--cyan);
+  border-radius: 0 0 0 0.5rem;
+}
+
+.subscription div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subscription div span {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.subscription div p {
+  opacity: 0.7;
+}
+
+.subscription button {
+  padding: 1rem 0;
+
+  border: 0;
+  border-radius: 0.25rem;
+  background-color: var(--bright-yellow);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--white);
+
+  box-shadow: 0 5px 20px -10px var(--grayish-blue);
+}
+
+/* why us sections */
+.why-us {
+  grid-area: why-us;
+
+  background-color: var(--cyan);
+  filter: brightness(110%);
+  border-radius: 0 0 0.5rem 0;
+}
+
+.why-us li {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
